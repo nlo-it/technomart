@@ -39,3 +39,13 @@
   background-image: url("img/shape.png");
   background-repeat: no-repeat;
 } */
+
+.logo {
+  background-color: red;
+}
+
+.logo-background {
+  width: 110;
+  height: 30;
+  background: transparent;
+}
