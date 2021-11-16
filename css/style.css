@@ -1,0 +1,41 @@
+/* .visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+} */
+
+/* .container {
+  width: 1020px;
+  margin: 0 auto;
+} */
+
+/* .btn-search {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 0;
+  vertical-align: middle;
+  background-image: url("img/shape.png");
+  background-repeat: no-repeat;
+} */
+
+/* .btn-hidden {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: transparent;
+  border: none;
+} */
+
+/* .btn-hidden::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: #293449;
+  color: #FFFFFF;
+  background-image: url("img/shape.png");
+  background-repeat: no-repeat;
+} */
