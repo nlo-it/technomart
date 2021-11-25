@@ -386,7 +386,7 @@ label {
 }
 
 .services-item-slider {
-  background-image: url("/img/png/slider-background.png");
+  background-image: url("/technomart/img/");
   grid-column: 1 / 3;
   grid-row: 2 / 4;
 }
