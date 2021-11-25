@@ -48,6 +48,10 @@ a {
   margin: 0 auto;
 }
 
+.header-logo a:active rect {
+  fill: #BA2732;
+}
+
 .header-logo svg {
   width: 220px;
   height: 47px;
@@ -62,6 +66,35 @@ a {
   position: relative;
 }
 
+.search-and-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-search svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  opacity: 0.3;
+}
+
+.form-search:hover svg {
+  opacity: 1;
+}
+
+/* Почему hover работает, а focus нет!? */
+/* Почему тёмная подложка логотипа, а именно .header-top получилась не 42px, а 40 - я ведь везде вбивал 42
+Из-за этого пришлось колхозить вертикальные padding-и у ссылок в навигации*/
+.form-search:hover path {
+  fill: red;
+}
+
+/* input[type=search]:focus+label path{
+  fill:#f0525d
+} */
+
 .search-field {
   width: 270px;
   height: 42px;
@@ -75,20 +108,9 @@ a {
   padding-left: 40px;
 }
 
-.search-field:focus {
+input[type=search]:focus {
   background-color: #ffffff;
   color: #000000;
-}
-
-.form-search svg {
-  position: absolute;
-  top: 12px;
-  left: 17px;
-  opacity: 0.3;
-}
-
-.form-search:hover svg {
-  opacity: 1;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -142,12 +164,17 @@ label {
 }
 
 .header-nav-item:last-child a {
-  padding: 10px 16px 11.5px 19px;
+  padding: 9px 16px 9px 19px;
   background-color: #63A63E;
 }
 
 .header-nav-item:not(:last-child) a:active {
   background-color: #161D29;
+}
+
+.header-nav-item:last-child a:active {
+  background-color: #63A63E;
+  opacity: 0.5;
 }
 
 .header-nav-item svg {
@@ -161,18 +188,23 @@ label {
   opacity: 1;
 }
 
+.header-middle {
+  margin-top: 20px;
+}
+
 .header-middle-line {
   width: 940px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 40px 0;
 }
 
 .header-middle-left-side {
   width: 197px;
   height: 71px;
+  padding-right: 93px;
+  margin-left: auto;
 }
 
 .header-middle-left-side h1 {
@@ -183,27 +215,106 @@ label {
   color: #EE3643;
 }
 
+.header-middle-center-side {
+  margin-top: 55px;
+  margin-right: 69px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
 .header-middle-center-side a {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
   color: #EE3643;
   padding: 7px 50px 8px 74px;
   border: 3px solid #FFFFFF;
-  box-sizing: border-box;
+}
+
+.header-middle-center-side p {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #32425C;
+}
+
+.header-middle-center-side svg {
+  position: absolute;
+  left: 44px;
+  top: 5px;
+}
+
+.header-middle-right-side a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: white;
+  text-align: center;
+  position: relative;
+}
+
+.header-middle-right-side a:first-child {
+  padding: 12px 27px 12px 45px;
+  margin-right: 10px;
+}
+
+.header-middle-right-side a:last-child {
+  padding: 12px 24px;
+}
+
+.header-middle-right-side a:first-child svg {
+  position: absolute;
+  left: 21px;
+  top: 15px;
+}
+
+.header-middle-right-side a:hover {
+  color: #EE3643;
+}
+
+.header-middle-right-side a:active {
+  color: #C5C5C5;
+}
+
+.header-middle-right-side a:first-child:hover path {
+  fill: #3D546F;
+}
+
+.header-middle-right-side a:first-child:active path {
+  fill: #C5C5C5;
+}
+
+.header-bottom {
+  margin-top: 10px;
 }
 
 .navigation-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: #32425C no-repeat;
   box-shadow: inset 0px -5px 0px #293449;
   height: 60px;
 }
+
+/* .navigation-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+} */
+
+/* li.navigation-item > a {
+  display: block;
+} */
 
 .navigation-list a {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -211,17 +322,47 @@ label {
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
+  padding: 18px 25px;
   color: #ffffff;
 }
 
-.services-list li {
-  width: 300px;
-  height: 123px;
+.navigation-list a:hover {
+  background-color: #293449;
 }
 
-.services-list li.services-item-slider {
-  width: 620px;
-  height: 266px;
+.navigation-list a:active {
+  background-color: #1D2739;
+  opacity: 0.5;
+}
+
+/* .navigation-list a:active {
+  background-color: #1D2739;
+} */
+
+.navigation-list li:first-child {
+  padding-left: 27px;
+}
+
+.navigation-list li:last-child {
+  padding-right: 27px;
+}
+
+.services {
+  padding-top: 59px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 123px 123px 123px;
+  gap: 20px;
+}
+
+.services-list li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 .services-item-materials {
@@ -250,19 +391,52 @@ label {
   grid-row: 2 / 4;
 }
 
-.services-list {
-  display: grid;
-  width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 20px;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 123px 123px 123px;
+.header-popular-products {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 89px;
+  background-color: #F9F5F0;
+  margin-top: 57px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header-popular-products p {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-left: 28px;
+  color: #32425C;
+}
+
+.header-popular-products a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  padding-left: 28px;
+  color: #ffffff;
+  padding: 11px 24px 9px;
+  background-color: #EE3643;
+  position: absolute;
+  right: 14px;
 }
 
 .popular-products-list {
   display: flex;
   justify-content: space-between;
+}
+
+.popular-products-item {
+  border: 1px solid black;
 }
 
 .popular-brands-list {
