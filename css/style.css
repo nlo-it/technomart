@@ -75,6 +75,7 @@ a {
 
 .form-search svg {
   position: absolute;
+  fill: white;
   top: 12px;
   left: 17px;
   opacity: 0.3;
@@ -91,6 +92,7 @@ a {
 
 input:focus ~ svg {
   fill: red;
+  opacity: 1;
 }
 
 .search-field {
