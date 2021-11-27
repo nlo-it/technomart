@@ -85,7 +85,15 @@ a {
 }
 
 /* Почему hover работает, а focus нет!? */
-.form-search:hover path {
+/* input[type=search]:focus path {
+  fill: red;
+} */
+
+input:focus ~ svg {
+  fill: red;
+}
+
+input:focus ~ path {
   fill: red;
 }
 
