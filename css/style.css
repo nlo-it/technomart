@@ -93,10 +93,6 @@ input:focus ~ svg {
   fill: red;
 }
 
-input:focus ~ path {
-  fill: red;
-}
-
 .search-field {
   width: 270px;
   height: 42px;
