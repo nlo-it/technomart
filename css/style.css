@@ -85,15 +85,9 @@ a {
 }
 
 /* Почему hover работает, а focus нет!? */
-/* Почему тёмная подложка логотипа, а именно .header-top получилась не 42px, а 40 - я ведь везде вбивал 42
-Из-за этого пришлось колхозить вертикальные padding-и у ссылок в навигации*/
 .form-search:hover path {
   fill: red;
 }
-
-/* input[type=search]:focus+label path{
-  fill:#f0525d
-} */
 
 .search-field {
   width: 270px;
@@ -168,6 +162,11 @@ label {
   background-color: #63A63E;
 }
 
+.header-nav-item:last-child a:hover {
+  padding: 9px 16px 9px 19px;
+  background-color: #5FBB2D;
+}
+
 .header-nav-item:not(:last-child) a:active {
   background-color: #161D29;
 }
@@ -188,9 +187,9 @@ label {
   opacity: 1;
 }
 
-.header-middle {
+/* .header-middle {
   margin-top: 20px;
-}
+} */
 
 .header-middle-line {
   width: 940px;
@@ -212,14 +211,16 @@ label {
   font-style: italic;
   line-height: 23px;
   font-size: 16px;
+  word-wrap: break-word;
   color: #EE3643;
 }
 
 .header-middle-center-side {
-  margin-top: 55px;
+  margin-top: 49px;
   margin-right: 69px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   position: relative;
+  box-sizing: border-box;
 }
 
 .header-middle-center-side a {
@@ -241,6 +242,7 @@ label {
   line-height: 24px;
   text-align: center;
   color: #32425C;
+  margin-bottom: 20px;
 }
 
 .header-middle-center-side svg {
@@ -259,6 +261,10 @@ label {
   background-color: white;
   text-align: center;
   position: relative;
+}
+
+.header-middle-right-side {
+  margin-top: -2px;
 }
 
 .header-middle-right-side a:first-child {
@@ -386,7 +392,7 @@ label {
 }
 
 .services-item-slider {
-  background-image: url("/technomart/img/");
+  background-image: url("/img/png/slider-background.png");
   grid-column: 1 / 3;
   grid-row: 2 / 4;
 }
@@ -433,10 +439,99 @@ label {
 .popular-products-list {
   display: flex;
   justify-content: space-between;
+  height: 318px;
 }
 
 .popular-products-item {
-  border: 1px solid black;
+  border: 2px solid #EAEAEA;
+  position: relative;
+  margin-right: 20px;
+}
+
+.popular-products-item:last-child {
+  margin-right: 0;
+}
+
+.popular-products-item div:first-of-type {
+  height: 178px;
+}
+
+.popular-products-item div:last-of-type {
+  height: 140px;
+}
+
+.popular-products-item h2 {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  align-content: center;
+  margin-top: 12px;
+}
+
+.popular-products-item div:last-of-type p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A9A9A9;
+  align-content: center;
+  position: absolute;
+  left: 75px;
+  bottom: 49px;
+}
+
+.popular-products-item div:last-of-type a {
+  background: url(/img/png/price-button.png) no-repeat center;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 10px 44px 10px 32px;
+  position: absolute;
+  left: 44px;
+  bottom: 19px;
+}
+
+.first-item-top-side img {
+  position: absolute;
+  top: 6px;
+  left: 18px;
+}
+
+.two-item-top-side img {
+  position: absolute;
+  top: 29px;
+  left: 40px;
+}
+
+.three-item-top-side img {
+  position: absolute;
+  top: 22px;
+  left: 33px;
+}
+
+.four-item-top-side img {
+  position: absolute;
+  top: 29px;
+  left: 40px;
 }
 
 .popular-brands-list {
@@ -448,4 +543,43 @@ label {
 .popular-brands-list li {
   width: 220px;
   height: 145px;
+}
+
+.header-popular-brands {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 89px;
+  background-color: #F9F5F0;
+  margin-top: 57px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header-popular-brands p {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-left: 28px;
+  color: #32425C;
+}
+
+.header-popular-brands a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  padding-left: 28px;
+  color: #ffffff;
+  padding: 11px 38px 9px 39px;
+  background-color: #EE3643;
+  position: absolute;
+  right: 14px;
 }
