@@ -1,3 +1,25 @@
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 192px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: #EE3643;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -209,6 +231,7 @@ label {
   width: 197px;
   height: 71px;
   padding-right: 93px;
+  margin-top: 20px;
   margin-left: auto;
 }
 
@@ -224,9 +247,8 @@ label {
 .header-middle-center-side {
   margin-top: 49px;
   margin-right: 69px;
-  /* margin-bottom: 10px; */
   position: relative;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .header-middle-center-side a {
@@ -248,13 +270,18 @@ label {
   line-height: 24px;
   text-align: center;
   color: #32425C;
-  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .header-middle-center-side svg {
   position: absolute;
   left: 44px;
   top: 5px;
+}
+
+.header-middle-right-side {
+  margin-top: 10px;
 }
 
 .header-middle-right-side a {
@@ -267,10 +294,6 @@ label {
   background-color: white;
   text-align: center;
   position: relative;
-}
-
-.header-middle-right-side {
-  margin-top: -2px;
 }
 
 .header-middle-right-side a:first-child {
@@ -305,7 +328,7 @@ label {
 }
 
 .header-bottom {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .navigation-list {
@@ -316,17 +339,6 @@ label {
   box-shadow: inset 0px -5px 0px #293449;
   height: 60px;
 }
-
-/* .navigation-list li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-} */
-
-/* li.navigation-item > a {
-  display: block;
-} */
 
 .navigation-list a {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -346,10 +358,6 @@ label {
   background-color: #1D2739;
   opacity: 0.5;
 }
-
-/* .navigation-list a:active {
-  background-color: #1D2739;
-} */
 
 .navigation-list li:first-child {
   padding-left: 27px;
@@ -403,10 +411,134 @@ label {
   grid-row: 2 / 4;
 }
 
+.materials-right-side img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.services-list div[class*="side"] {
+  width: 150px;
+  height: 123px;
+  position: relative;
+}
+
+.services-list div[class*="left-side"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 23px;
+}
+
+.services-list div[class*="right-side"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-list h3 {
+  display: inline-block;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.services-btn {
+  display: inline-block;
+  width: 135px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 14px;
+}
+
+.slider {
+  width: 620px;
+  height: 266px;
+}
+
+.slider-top {
+  width: 620px;
+  height: 104px;
+  position: relative;
+}
+
+.slider-bottom {
+  width: 620px;
+  height: 162px;
+  position: relative;
+}
+
+.services-item-slider h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  top: 23px;
+  left: 24px;
+}
+
+.services-item-slider p {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 64px;
+  left: 24px;
+}
+
+.services-item-slider a {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
+}
+
+.slider-control {
+  position: relative;
+}
+
+.btn-arrow {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  fill: white;
+  border: none;
+}
+
+.slider-control a:first-child {
+  top: -144px;
+  left: 16px;
+}
+
+.slider-control a:last-child {
+  top: -144px;
+  left: 579px;
+}
+
 .header-popular-products {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   height: 89px;
   background-color: #F9F5F0;
   margin-top: 57px;
@@ -414,7 +546,7 @@ label {
   position: relative;
 }
 
-.header-popular-products p {
+.popular-p {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -426,20 +558,7 @@ label {
 }
 
 .header-popular-products a {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  align-self: center;
-  text-transform: uppercase;
-  padding-left: 28px;
-  color: #ffffff;
-  padding: 11px 24px 9px;
-  background-color: #EE3643;
-  position: absolute;
-  right: 14px;
+  margin-right: 14px;
 }
 
 .popular-products-list {
@@ -495,7 +614,7 @@ label {
   align-content: center;
   position: absolute;
   left: 75px;
-  bottom: 49px;
+  bottom: 65px;
 }
 
 .popular-products-item div:last-of-type a {
@@ -554,7 +673,7 @@ label {
 .header-popular-brands {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   height: 89px;
   background-color: #F9F5F0;
   margin-top: 57px;
@@ -562,30 +681,6 @@ label {
   position: relative;
 }
 
-.header-popular-brands p {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-  padding-left: 28px;
-  color: #32425C;
-}
-
 .header-popular-brands a {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  align-self: center;
-  text-transform: uppercase;
-  padding-left: 28px;
-  color: #ffffff;
-  padding: 11px 38px 9px 39px;
-  background-color: #EE3643;
-  position: absolute;
-  right: 14px;
+  margin-right: 14px;
 }

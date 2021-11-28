@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/outlines.css"> -->
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
@@ -80,13 +80,11 @@
             <form action="#" method="get">
               <input class="search-field" type="search" name="search" id="search" placeholder="Поиск:"
                 autocomplete="off">
+              <button class="visually-hidden" type="submit"></button>
               <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
               </svg>
-              <!-- <div class="search-icon">
-                    <button class="btn-search btn-hidden" type="submit" id="submit-button"></button>
-                  </div> -->
               <label class="visually-hidden" for="search">Строка поиска</label>
             </form>
           </div>
@@ -124,7 +122,9 @@
             <div class="header-middle-center-side">
               <a href="tel:+78005558628">
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.572 18.985H14.631C10.502 18.497 7.474 16.577 5.272 14.121C3.062 11.66 1.318 8.49202 0.977997 4.22802V3.08402C1.056 2.31002 1.437 1.78002 1.876 1.32702C2.425 0.76602 3.25 0.0440198 4.002 0.0190198C4.556 0.00101977 5.502 0.39902 5.881 0.91802C6.21 1.36402 6.385 2.25702 6.537 2.92102C6.691 3.59202 7.042 4.56402 6.945 5.21002C6.797 6.21702 5.458 6.64402 5.066 7.37602C6.373 10.511 8.509 12.815 11.359 14.407C12.074 14.015 12.705 12.835 13.691 12.812C14.05 12.803 14.509 12.99 14.875 13.098C15.277 13.219 15.625 13.373 15.979 13.506C16.575 13.73 17.627 14.027 17.983 14.527C18.348 15.04 18.553 15.883 18.473 16.406C18.309 17.447 16.594 18.603 15.572 18.985Z" fill="#B7BFC8"/>
+                  <path
+                    d="M15.572 18.985H14.631C10.502 18.497 7.474 16.577 5.272 14.121C3.062 11.66 1.318 8.49202 0.977997 4.22802V3.08402C1.056 2.31002 1.437 1.78002 1.876 1.32702C2.425 0.76602 3.25 0.0440198 4.002 0.0190198C4.556 0.00101977 5.502 0.39902 5.881 0.91802C6.21 1.36402 6.385 2.25702 6.537 2.92102C6.691 3.59202 7.042 4.56402 6.945 5.21002C6.797 6.21702 5.458 6.64402 5.066 7.37602C6.373 10.511 8.509 12.815 11.359 14.407C12.074 14.015 12.705 12.835 13.691 12.812C14.05 12.803 14.509 12.99 14.875 13.098C15.277 13.219 15.625 13.373 15.979 13.506C16.575 13.73 17.627 14.027 17.983 14.527C18.348 15.04 18.553 15.883 18.473 16.406C18.309 17.447 16.594 18.603 15.572 18.985Z"
+                    fill="#B7BFC8" />
                 </svg>+7 800 555-86-28
               </a>
               <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -133,7 +133,9 @@
               <a href="#">
                 <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5" />
-                  <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
+                  <path
+                    d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
+                    fill="#C5C5C5" />
                 </svg>Войти
               </a>
               <a href="#">Регистрация</a>
@@ -167,66 +169,75 @@
             <li class="services-item-materials">
               <div class="materials-left-side">
                 <h3>Материалы</h3>
-                <a href="#">НА ЛЮБОЙ ВКУС</a>
+                <a class="services-btn" href="#">НА ЛЮБОЙ ВКУС</a>
               </div>
               <div class="materials-right-side">
+                <img src="img/svg/can-of-paint.svg">
                 <img src="img/svg/wrap.svg">
-                <img src="img/png/can-of-paint.png">
               </div>
             </li>
             <li class="services-item-tools">
               <div class="tools-left-side">
                 <h3>Инструмент</h3>
-                <a href="#">НА ВСЕ СЛУЧАИ</a>
+                <a class="services-btn" href="#">НА ВСЕ СЛУЧАИ</a>
               </div>
               <div class="tools-right-side">
-                <img src="/img/png/screwdriver.png">
+                <img src="/img/svg/screwdriver.svg">
               </div>
             </li>
             <li class="services-item-technic">
               <div class="technic-left-side">
                 <h3>Техника</h3>
-                <a href="#">ДЛЯ СТРОЙКИ</a>
+                <a class="services-btn" href="#">ДЛЯ СТРОЙКИ</a>
               </div>
               <div class="technic-right-side">
-                <img src="/img/png/tractor.png">
+                <img src="/img/svg/tractor.svg">
               </div>
             </li>
             <li class="services-item-sale">
               <div class="sale-left-side">
                 <h3>Скидки 50%</h3>
-                <a href="#">На 350 ТОВАРОВ</a>
+                <a class="services-btn" href="#">На 350 ТОВАРОВ</a>
               </div>
               <div class="sale-right-side">
-                <img src="/img/png/basket-sale.png">
+                <img src="/img/svg/basket-sale.svg">
               </div>
             </li>
             <li class="services-item-delivery">
               <div class="delivery-left-side">
                 <h3>Доставка</h3>
-                <a href="#">БЕСПЛАТНО</a>
+                <a class="services-btn" href="#">БЕСПЛАТНО</a>
               </div>
               <div class="delivery-right-side">
-                <img src="/img/png/fast-delivery.png">
+                <img src="/img/svg/fast-delivery.svg">
               </div>
             </li>
             <li class="services-item-slider">
               <div class="slider">
-                <h3>ПЕРФОРАТОРЫ</h3>
-                <p>Настоящие мужские игрушки</p>
+                <div class="slider-top">
+                  <h3>ПЕРФОРАТОРЫ</h3>
+                  <p>Настоящие мужские игрушки</p>
+                </div>
+                <div class="slider-bottom">
+                  <a class="btn" href="#" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
+                </div>
+                <div class="slider-control">
+                  <a class="btn-arrow" href="#"><img src="img/svg/icon-left-arrow.svg"></a>
+                  <a class="btn-arrow" href="#"><img src="img/svg/icon-right-arrow.svg"></a>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
-    
+
     <section class="popular-products-section">
       <h2 class="visually-hidden">Каталог популярных товаров</h2>
       <div class="container">
         <div class="header-popular-products">
-          <p>Популярные товары:</p>
-          <a href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
+          <p class="popular-p">Популярные товары:</p>
+          <a class="btn" href="#" target="_blank" title="Каталог популярных товаров">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
         </div>
         <article class="popular-products">
           <h1 class="visually-hidden">Популярные модели перформаторов</h1>
@@ -279,8 +290,8 @@
     <section class="popular-brands-section">
       <div class="container">
         <div class="header-popular-brands">
-          <p>Популярные производители</p>
-          <a href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
+          <p class="popular-p">Популярные производители</p>
+          <a class="btn" href="#" target="_blank" title="Открыть список производителей">ВСЕ ПРОИЗВОДИТЕЛИ</a>
         </div>
         <div class="popular-brands">
           <ul class="popular-brands-list">
@@ -359,7 +370,7 @@
             <li class="about-company-item">Деловые линии</li>
             <li class="about-company-item">Автотрейдинг</li>
             <li class="about-company-item">ЖелДорЭкспедиция</li>
-            <a class="btn" href="#">Подробнее о компании</a>
+            <a class="btn" href="#" target="_blank">Подробнее о компании</a>
           </ul>
         </div>
         <div class="address-and-map">
@@ -367,7 +378,7 @@
           <p>Вы можете забрать товар сами,
             заехав в наш офис:</p>
           <button><img src="img/png/map.png"></button>
-          <button>ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+          <button class="btn">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
         </div>
       </div>
     </section>
