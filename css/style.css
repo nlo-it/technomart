@@ -411,10 +411,26 @@ label {
   grid-row: 2 / 4;
 }
 
-.materials-right-side img:nth-child(2) {
+.materials-right-side {
+  overflow: hidden;
+}
+
+/* Красный стикер с надписью: "NEW" */
+.red-sticker::after {
+  content: "NEW";
+  display: inline-block;
+  vertical-align: middle;
+  padding: 6px 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #EE3643;
+  transform: rotate(45deg);
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 5px;
+  right: -25px;
 }
 
 .services-list div[class*="side"] {
@@ -571,6 +587,7 @@ label {
   border: 2px solid #EAEAEA;
   position: relative;
   margin-right: 20px;
+  overflow: hidden;
 }
 
 .popular-products-item:last-child {
@@ -659,6 +676,21 @@ label {
   left: 40px;
 }
 
+.header-popular-brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+  margin-top: 57px;
+  margin-bottom: 20px;
+  background-color: #F9F5F0;
+  position: relative;
+}
+
+.header-popular-brands a {
+  margin-right: 14px;
+}
+
 .popular-brands-list {
   display: flex;
   justify-content: space-between;
@@ -668,19 +700,34 @@ label {
 .popular-brands-list li {
   width: 220px;
   height: 145px;
-}
-
-.header-popular-brands {
+  border: 2px solid #EAEAEA;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 89px;
-  background-color: #F9F5F0;
-  margin-top: 57px;
+  margin-right: 20px;
   margin-bottom: 20px;
-  position: relative;
+  box-sizing: border-box;
 }
 
-.header-popular-brands a {
-  margin-right: 14px;
+.popular-brands-list li:nth-of-type(4n) {
+  margin-right: 0;
 }
+
+.popular-brands-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.popular-brands-item a:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.popular-brands-item a:active {
+  opacity: 0.5;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
