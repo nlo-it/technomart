@@ -809,6 +809,7 @@ label {
   height: 46.5px;
   padding-top: 13.5px;
   padding-left: 22px;
+  cursor: pointer;
   position: absolute;
 }
 
