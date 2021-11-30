@@ -256,7 +256,6 @@ label {
   margin-top: 49px;
   margin-right: 69px;
   position: relative;
-  /* box-sizing: border-box; */
 }
 
 .header-middle-center-side a {
@@ -752,14 +751,14 @@ label {
   height: 522px;
   padding-top: 64px;
   background-color: #F1F5F7;
-  border: 1px solid black;
-  box-sizing: border-box;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
 }
 
 .services-top {
   height: 124px;
-  border: 1px solid black;
-  box-sizing: border-box;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
 }
 
 .services-bottom {
@@ -790,8 +789,8 @@ label {
 
 .services-bottom {
   height: 323px;
-  border: 1px solid red;
-  box-sizing: border-box;
+  /* border: 1px solid red;
+  box-sizing: border-box; */
   position: relative;
 }
 
@@ -828,13 +827,28 @@ label {
   top: 154px;
 }
 
+#delivery-id:checked ~ .services-bottom-delivery {
+  color: #32425C;
+  background-color: #ffffff;
+}
+
+#warranty-id:checked ~ .services-bottom-warranty {
+  color: #32425C;
+  background-color: #ffffff;
+}
+
+#credit-id:checked ~ .services-bottom-credit {
+  color: #32425C;
+  background-color: #ffffff;
+}
+
 .services-bottom-right {
-  border: 1px solid black;
   width: 619px;
   height: 283px;
-  box-sizing: border-box;
   margin-left: auto;
   margin-top: 35px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
   position: relative;
 }
 
