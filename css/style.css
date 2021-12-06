@@ -113,7 +113,7 @@ header {
 }
 
 input:focus ~ svg {
-  fill: red;
+  fill: #EE3643;
   opacity: 1;
 }
 
@@ -150,10 +150,6 @@ input[type="search"]:focus::-webkit-input-placeholder {
 input[type="search"]:focus::-moz-placeholder {
   color: #000000;
  }
-
-label {
-  color: rgba(0, 0, 0, 0);
-}
 
 .user-nav {
   height: 100%;
