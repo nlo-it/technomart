@@ -146,9 +146,9 @@
           <div class="container">
             <nav class="main-navigation">
               <ul class="navigation-list">
-                <li class="navigation-item"><a href="#">Главная</a></li>
+                <li class="navigation-item"><a href="index.html">Главная</a></li>
                 <li class="navigation-item"><a href="#">Компания</a></li>
-                <li class="navigation-item"><a href="#">Каталог</a></li>
+                <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
                 <li class="navigation-item"><a href="#">Новости</a></li>
                 <li class="navigation-item"><a href="#">Спецпредложения</a></li>
                 <li class="navigation-item"><a href="#">Доставка</a></li>
@@ -180,48 +180,52 @@
           <div class="filter">
             <form action="#" method="get">
               <fieldset>
-                <p>ФИЛЬТР:</p>
-                <label for="price-range">Цена:</label>
-                <span>0</span>
-                <input type="range" min="0" max="30000" step="1" name="price-range" id="price-range">
-                <span>30000</span>
-
-                Производители:
-                <ul>
-                  <li>
-                    <input type="checkbox" name="manufacturer-bosch" id="manufacturer-bosch" checked>
-                    <label for="manufacturer-bosch">BOSCH</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="manufacturer-interskol" id="manufacturer-interskol">
-                    <label for="manufacturer-interskol">ИНТЕРСКОЛ</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="manufacturer-makita" id="manufacturer-makita" checked>
-                    <label for="manufacturer-makita">MAKITA</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="manufacturer-dewalt" id="manufacturer-dewalt">
-                    <label for="manufacturer-dewalt">DEWALT</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="manufacturer-hitachi" id="manufacturer-hitachi">
-                    <label for="manufacturer-hitachi">HITACHI</label>
-                  </li>
-                </ul>
-
-                Питание:
-                <ul>
-                  <li>
-                    <input type="radio" name="type-power-supply" id="rechargeable" checked>
-                    <label for="battery">АККУМУЛЯТОРНЫЕ</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="type-power-supply" id="network">
-                    <label for="network">СЕТЕВЫЕ</label>
-                  </li>
-                </ul>
-                <button type="button">Показать</button>
+                <fieldset>
+                  <legend>ФИЛЬТР:</legend>
+                  <label for="price-range">Цена:</label>
+                  <span>0</span>
+                  <input type="range" min="0" max="30000" step="1" name="price-range" id="price-range">
+                  <span>30000</span>
+                </fieldset>
+                <fieldset>
+                  <legend>Производители:</legend>
+                  <ul>
+                    <li>
+                      <input type="checkbox" name="manufacturer-bosch" id="manufacturer-bosch" checked>
+                      <label for="manufacturer-bosch">BOSCH</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="manufacturer-interskol" id="manufacturer-interskol">
+                      <label for="manufacturer-interskol">ИНТЕРСКОЛ</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="manufacturer-makita" id="manufacturer-makita" checked>
+                      <label for="manufacturer-makita">MAKITA</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="manufacturer-dewalt" id="manufacturer-dewalt">
+                      <label for="manufacturer-dewalt">DEWALT</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="manufacturer-hitachi" id="manufacturer-hitachi">
+                      <label for="manufacturer-hitachi">HITACHI</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset>
+                  <legend>Питание:</legend>
+                  <ul>
+                    <li>
+                      <input type="radio" name="type-power-supply" id="rechargeable" checked>
+                      <label for="battery">АККУМУЛЯТОРНЫЕ</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="type-power-supply" id="network">
+                      <label for="network">СЕТЕВЫЕ</label>
+                    </li>
+                  </ul>
+                  <button type="button">Показать</button>
+                </fieldset>
               </fieldset>
             </form>
           </div>
