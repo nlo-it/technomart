@@ -97,8 +97,8 @@
   --white-aluminum: #A9A9A9;
   --grey-neutral: #ABABAB;
   --moderate-grey: rgba(255, 255, 255, 0.3);
-  --darker-grey: rgba(197, 197, 197, 0.3);
   --dark-grey: rgba(169, 169, 169, 0.3);
+  --darker-grey: rgba(197, 197, 197, 0.3);
   --dark-quartz: rgba(171, 171, 171, 0.3);
   --tundora: #444444;
 }
@@ -169,10 +169,12 @@
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--basic-red);
+  border: none;
   display: inline-block;
   vertical-align: middle;
   padding-top: 11px;
   padding-bottom: 9px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -239,7 +241,13 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
+
+/* ИСПРАВИТЬ БАГ!!! СТРАНИЦА BLANK.HTML ПОЧЕМУ-ТО УЕЗЖАЕТ ВПРАВО НА 16PX - ПРОБЛЕМА СКОРЕЕ ВСЕГО В СТИЛЯХ */
+/* .blank {
+  margin-left: -16px;
+} */
 
 .page {
   height: 100%;
@@ -273,17 +281,19 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 59px;
 }
 
 .header-top-wrapper {
   height: 42px;
   background-color: var(--ocean-blue);
   margin-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   align-self: stretch;
 }
 
-.header-top-wrapper > div {
+.header-top-wrapper > .container {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -371,69 +381,74 @@ input[type="number"]:focus::-moz-placeholder {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
+  vertical-align: bottom;
   margin-left: auto;
 }
 
-.header-nav-item a {
+.header-nav-item {
+  width: 150px;
+  display: inline-block;
+}
+
+.header-nav-link {
+  width: 100%;
   text-align: center;
   color: var(--white);
   display: inline-block;
   position: relative;
-  margin-right: 0;
 }
 
-.header-nav-item:first-child a {
+.bookmarks-link {
   padding: 9px 24px 9px 43px;
 }
 
-.header-nav-item:nth-child(2) a {
-  padding: 9px 26px 9px 40px;
+.basket-link {
+  padding: 9px 26px 9px 49px;
 }
 
-.header-nav-item:nth-child(2) .header-user-action {
+.order-link {
+  padding: 9px 16px 9px 19px;
+  background-color: var(--herbal);
+}
+
+.basket-link-action {
   padding: 9px 23px 9px 47px;
   background-color: var(--basic-red);
 }
 
-.header-nav-item:last-child a {
-  padding: 9px 16px 9px 20px;
-  background-color: var(--herbal);
+.header-nav-link:active {
+  background-color: var(--purple-blue);
 }
 
-.header-nav-item:last-child a:hover {
+.order-link:hover {
   background-color: var(--dark-green);
 }
 
-.header-nav-item:last-child a:active {
+.order-link:active {
   background-color: var(--herbal);
   opacity: 0.5;
 }
 
-.header-nav-item:not(:last-child) a:active {
-  background-color: var(--purple-blue);
-}
-
-.header-nav-item .bookmarks,
-.header-nav-item .basket,
-.header-nav-item .basket.catalog {
+.bookmarks,
+.basket {
   opacity: 0.3;
   position: absolute;
   top: 13px;
 }
 
-.header-nav-item .bookmarks {
+.bookmarks {
   left: 20px;
 }
 
-.header-nav-item .basket {
-  left: 19px;
+.basket {
+  left: 26px;
 }
 
-.header-nav-item .basket.catalog {
+.basket-action {
   left: 24px;
 }
 
-.header-nav-item:hover svg {
+.header-nav-link:hover svg {
   opacity: 1;
 }
 
@@ -537,12 +552,16 @@ input[type="number"]:focus::-moz-placeholder {
   left: 19px;
 }
 
-.user-button-link:hover path {
-  fill: var(--moderate-blue);
+.user-button-item {
+  display: inline-block;
 }
 
 .user-button-item .user-button-link:hover {
   color: var(--basic-red);
+}
+
+.user-button-link:hover path {
+  fill: var(--moderate-blue);
 }
 
 /*Стили для user-button-list В catalog.html*/
@@ -631,10 +650,6 @@ input[type="number"]:focus::-moz-placeholder {
   margin-bottom: 60px;
 }
 
-.header-bottom.catalog {
-  margin-bottom: -60px;
-}
-
 .navigation-list {
   height: 100%;
   display: flex;
@@ -674,7 +689,7 @@ input[type="number"]:focus::-moz-placeholder {
 
 .features {
   max-height: 409px;
-  margin-bottom: 59px;
+  margin: 59px auto;
 }
 
 .features-list {
@@ -1012,7 +1027,7 @@ input[type="number"]:focus::-moz-placeholder {
 }
 
 .buy-btn,
-.add-bookmarks {
+.add-bookmarks-btn {
   width: 135px;
   height: 38px;
   display: inline-block;
@@ -1033,7 +1048,7 @@ input[type="number"]:focus::-moz-placeholder {
   left: 41px;
 }
 
-.add-bookmarks {
+.add-bookmarks-btn {
   color: var(--dark-blue);
   background-color: var(--white);
   border: 3px solid var(--herbal);
@@ -1062,12 +1077,12 @@ input[type="number"]:focus::-moz-placeholder {
   opacity: 0.3;
 }
 
-.add-bookmarks:hover {
+.add-bookmarks-btn:hover {
   border: 3px solid var(--dark-blue);
   background-color: var(--white);
 }
 
-.add-bookmarks:active {
+.add-bookmarks-btn:active {
   border: 3px solid var(--dark-blue);
   background-color: var(--white);
   opacity: 0.5;
@@ -1521,10 +1536,6 @@ footer p {
   color: var(--basic-red);
 }
 
-main.blank {
-  padding: 10px 0;
-}
-
 .message {
   font-size: 45px;
   line-height: 51px;
@@ -1558,7 +1569,7 @@ main.blank {
   opacity: 0.5;
 }
 
-.cloud{
+.cloud {
   width: 200px;
   height: 50px;
   background-color: var(--white);   
@@ -1567,7 +1578,7 @@ main.blank {
   top:100;
 }
 
-[data-type="white_4"]:before{
+[data-type="white_4"]:before {
   content: "";
   display: block;
   width: 50px;
@@ -1581,7 +1592,7 @@ main.blank {
               80px 25px 0 10px var(--white), 40px 25px 0 20px var(--white), 0 40px 0 -5px var(--white);
 }
 
-[data-type="white_5"]:before{
+[data-type="white_5"]:before {
   content: "";
   display: block;
   width: 50px;
@@ -1595,7 +1606,7 @@ main.blank {
               20px 30px 0 20px var(--white), 70px 30px 0 10px var(--white), 105px 40px 0 -10px var(--white);
 }
 
-[data-type="white_6"]:before{
+[data-type="white_6"]:before {
   content: "";
   display: block;
   width: 50px;
@@ -1636,13 +1647,13 @@ to {left:110%;}
 }
 
 
-[data-speed="1"]{
+[data-speed="1"] {
   animation: linemove 43s;
   -webkit-animation: linemove 43s;
 
 }
 
-[data-speed="5"]{
+[data-speed="5"] {
   animation: linemove 35s;
   -webkit-animation: linemove 35s;
 
@@ -1661,27 +1672,8 @@ to {left:110%;}
   animation-delay: -70s;
 }
 
-/*Для catalog.html*/
-
-.header-middle-line.catalog {
-  margin-top: 23px;
-}
-
-.header-middle-left-side p {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-style: italic;
-  font-weight: normal;
-  line-height: 23px;
-  font-size: 16px;
-  color: var(--basic-red);
-}
-
-a.catalog {
-  background-color: var(--ocean-blue);
-}
-
-/* Начало MAIN */
-/* Хлебные крошки */
+/*catalog.html*/
+/*Хлебные крошки*/
 
 .paginated-navigation {
   height: 59px;
@@ -1696,8 +1688,13 @@ a.catalog {
   align-items: center;
 }
 
-.bread-crumbs-item a {
+.bread-crumbs-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.bread-crumbs-link {
   font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
   line-height: 18px;
   vertical-align: middle;
   text-transform: uppercase;
@@ -1705,35 +1702,25 @@ a.catalog {
   display: inline-block;
 }
 
-.bread-crumbs-item:not(:last-child) a {
-  margin-right: 40px;
-}
-
-.bread-crumbs-item:first-child a {
+.bc-home-icon {
   width: 14px;
   height: 12px;
   background: url("/img/svg/icons/icon-home.svg") no-repeat;
 }
 
-.bread-crumbs-item:first-child a::after {
+.bread-crumbs-item:not(:last-child) .bread-crumbs-link::after {
   content: "";
   position: absolute;
   width: 8px;
   height: 12px;
-  background: url("/img/svg/icons/icon-small-arrow.svg") no-repeat;
-  left: 30px;
+  background: url("/img/svg/icons/icon-bc-arrow.svg") no-repeat;
+  margin-left: 16px;
+  top: 7px;
   pointer-events: none;
 }
 
-.bread-crumbs-item:not(:first-child):not(:last-child) a::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 12px;
-  background: url("/img/svg/icons/icon-small-arrow.svg") no-repeat;
-  margin-left: 17px;
-  top: 7px;
-  pointer-events: none;
+.bc-home-icon::after {
+  left: 14px;
 }
 
 h1.catalog {
@@ -1744,7 +1731,7 @@ h1.catalog {
   margin-bottom: 20px;
 }
 
-.catalog-positioning {
+.catalog-grid {
   display: grid;
   grid-template-columns: 220px 720px;
   gap: 20px;
@@ -2238,6 +2225,13 @@ input[type="number"] {
 .modal-map {
   max-width: 943px;
   max-height: 449px;
+  overflow: hidden;
+}
+
+.modal-map-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 /*modal-add-item*/
@@ -2251,49 +2245,49 @@ input[type="number"] {
   align-items: center;
 }
 
-.modal-add-item h2 {
+.add-item-message {
   width: 100%;
   height: 170px;
+  padding-top: 73px;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  color: var(--black);
   text-align: center;
-  padding-top: 73px;
+  color: var(--black);
+  position: relative;
 }
 
-.add-item-line {
+.add-item-message::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  background: url(/img/svg/icons/icon-mark.svg) no-repeat;
+  top: 55px;
+  left: 81px;
+}
+
+.add-item-action {
   width: 100%;
   height: 112px;
   background-color: var(--wild-sand);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 37px 114px;
 }
 
-.add-item-btn {
-  width: 192px;
-}
-
-.add-item-btn:nth-child(2) {
+.add-item-action .add-item-btn:nth-child(2) {
   background-color: var(--white);
   color: var(--black);
 }
 
-.add-item-btn:nth-child(2):hover {
+.add-item-action .add-item-btn:nth-child(2):hover {
   color: var(--basic-red);
 }
 
-.add-item-btn:nth-child(2):active {
+.add-item-action .add-item-btn:nth-child(2):active {
   color: var(--pale-blue);
-}
-
-.decoration-checkmark {
-  position: absolute;
-  width: 66px;
-  height: 66px;
-  top: 55px;
-  left: 81px;
 }
 
 /*modal-write-us*/
@@ -2413,5 +2407,5 @@ input[type="number"] {
 }
 
 .login-icon-user {
-  background: url(/img/svg/forms/icon-user.svg) no-repeat 190px 8px;
+  background: url(/img/svg/icons/icon-user.svg) no-repeat 190px 8px;
 }
