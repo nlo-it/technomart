@@ -1,4 +1,4 @@
-/* Fonts */
+/*Fonts*/
 
 @font-face {
   font-family: "Cuprum";
@@ -60,8 +60,8 @@
   font-display: swap;
 }
 
-/* Variables */
-/* НАДО ПЕРЕДЕЛАТЬ ПЕРЕМЕННЫЕ - ДОБАВИТЬ ЛОГИКУ В НАЗВАНИЯ! */
+/*Variables*/
+/*НАДО ПЕРЕДЕЛАТЬ ПЕРЕМЕННЫЕ - ДОБАВИТЬ ЛОГИКУ В НАЗВАНИЯ!*/
 
 :root {
   --black: #000000;
@@ -103,18 +103,18 @@
   --tundora: #444444;
 }
 
-/* Global */
+/*Global*/
 
 *,
 *::before,
 *::after { 
   box-sizing: border-box;
 }
-/* Возможно, этот класс не нужен, ибо есть .visually-hidden*/
+/*Возможно, этот класс не нужен, ибо есть .visually-hidden*/
 .hidden {
   display: none;
 }
-/* Возможно, этот класс не нужен, ибо есть .visually-hidden*/
+/*Возможно, этот класс не нужен, ибо есть .visually-hidden*/
 .invisible {
   visibility: hidden;
 }
@@ -185,24 +185,6 @@
   background-color: var(--crimson-red);
 }
 
-/* Красный стикер с надписью: "NEW" */
-.promo-sticker::after {
-  content: "NEW";
-  vertical-align: middle;
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--white);
-  background-color: var(--basic-red);
-  transform: rotate(45deg);
-  padding: 6px 50px;
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  right: -40px;
-}
-
 /*Для заголовков*/
 
 .heading {
@@ -218,7 +200,7 @@
   margin: 0;
 }
 
-/* Для абзацев */
+/*Для абзацев*/
 
 .text-description {
   max-height: 100%;
@@ -244,16 +226,18 @@ img {
   display: block;
 }
 
-/* ИСПРАВИТЬ БАГ!!! СТРАНИЦА BLANK.HTML ПОЧЕМУ-ТО УЕЗЖАЕТ ВПРАВО НА 16PX - ПРОБЛЕМА СКОРЕЕ ВСЕГО В СТИЛЯХ */
-/* .blank {
+/*ИСПРАВИТЬ БАГ!!! СТРАНИЦА BLANK.HTML ПОЧЕМУ-ТО УЕЗЖАЕТ ВПРАВО НА 16PX - ПРОБЛЕМА СКОРЕЕ ВСЕГО В СТИЛЯХ*/
+/*.blank {
   margin-left: -16px;
-} */
+}*/
 
 .page {
   height: 100%;
 }
 
 .page-body {
+  /*Возможно стоит добавить min-width: 940px*/
+  min-height: 100%;
   font-size: 13px;
   line-height: 24px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -261,6 +245,8 @@ img {
   font-style: normal;
   color: var(--dark-blue);
   background-color: var(--white);
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   padding: 0;
   margin: 0;
 }
@@ -281,6 +267,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* outline: 5px solid rgba(0, 26, 255, 0.7);
+  outline-offset: -5px; */
 }
 
 .header-top-wrapper {
@@ -391,7 +379,7 @@ input[type="number"]:focus::-moz-placeholder {
 }
 
 .header-nav-link {
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
   color: var(--white);
   display: inline-block;
@@ -429,6 +417,10 @@ input[type="number"]:focus::-moz-placeholder {
   opacity: 0.5;
 }
 
+.header-nav-link:hover svg {
+  opacity: 1;
+}
+
 .bookmarks,
 .basket {
   opacity: 0.3;
@@ -446,10 +438,6 @@ input[type="number"]:focus::-moz-placeholder {
 
 .basket-action {
   left: 24px;
-}
-
-.header-nav-link:hover svg {
-  opacity: 1;
 }
 
 /*HEADER/header-middle*/
@@ -685,53 +673,53 @@ input[type="number"]:focus::-moz-placeholder {
   padding-right: 27px;
 }
 
-/*FEATURES*/
+/*PROMO*/
 
-.features {
+.promo {
   max-height: 409px;
   margin: 59px auto;
 }
 
-.features-list {
+.promo-list {
   display: grid;
   grid-template-rows: repeat(3, 123px);
   grid-template-columns: repeat(3, 300px);
   gap: 20px;
 }
 
-.features-item {
+.promo-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.features-item:first-child {
+.promo-item:first-child {
   background-color: var(--shiny-orange);
 }
 
-.features-item:nth-child(2) {
+.promo-item:nth-child(2) {
   background-color: var(--frosty-sky);
 }
 
-.features-item:nth-child(3) {
+.promo-item:nth-child(3) {
   background-color: var(--lavender-pink);
 }
 
-.features-item:nth-child(4) {
+.promo-item:nth-child(4) {
   background-color: var(--light-green);
 }
 
-.features-item:nth-child(5) {
+.promo-item:nth-child(5) {
   background-color: var(--shiny-orange);
 }
 
-.features-list div[class*="side"] {
+.promo-list div[class*="side"] {
   width: 150px;
   height: 123px;
   position: relative;
 }
 
-.features-list div[class*="left-side"] {
+.promo-list div[class*="left-side"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -739,14 +727,14 @@ input[type="number"]:focus::-moz-placeholder {
   margin-left: 23px;
 }
 
-.features-list div[class*="right-side"] {
+.promo-list div[class*="right-side"] {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.features-list h3 {
+.promo-list h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -755,7 +743,7 @@ input[type="number"]:focus::-moz-placeholder {
   display: inline-block;
 }
 
-.features-btn {
+.promo-btn {
   width: 135px;
   font-size: 14px;
   line-height: 18px;
@@ -769,19 +757,43 @@ input[type="number"]:focus::-moz-placeholder {
   margin-top: 14px;
 }
 
-.features-btn:hover {
+.promo-btn:hover {
   background-color: var(--darker-grey);
 }
 
-.features-btn:active {
+.promo-btn:active {
   background-color: var(--dark-grey);
 }
 
-.features-item:last-child {
+.promo-item:last-child {
   width: 620px;
   height: 266px;
   grid-column: 1 / 3;
   grid-row: 2 / 4;
+}
+
+.promo-item:last-child a {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
+}
+
+/*Красный стикер с надписью: "NEW"*/
+.promo-sticker::after {
+  content: "NEW";
+  vertical-align: middle;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--basic-red);
+  transform: rotate(45deg);
+  padding: 6px 50px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: -40px;
 }
 
 .slider-toggle,
@@ -870,19 +882,19 @@ input[type="number"]:focus::-moz-placeholder {
   top: 141px;
 }
 
-#first-slide:checked ~ .main-slider-list .first-slide-content,
-#second-slide:checked ~ .main-slider-list .second-slide-content {
+#first-slide:checked ~ .promo-slider-list .first-slide-content,
+#second-slide:checked ~ .promo-slider-list .second-slide-content {
   visibility: visible;
 }
 
-.main-slider-list {
+.promo-slider-list {
   width: 620px;
   height: 266px;
   position: relative;
   visibility: hidden;
 }
 
-.main-slider-list li {
+.promo-slider-list li {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -891,16 +903,16 @@ input[type="number"]:focus::-moz-placeholder {
 .first-slide-content {
   width: 100%;
   height: 100%;
-  background: var(--dark-blue) url("/img/jpg/sliders/main-slider/first-slide-background.jpg") no-repeat;
+  background: var(--dark-blue) url("/img/jpg/sliders/promo-slider/first-slide-background.jpg") no-repeat;
 }
 
 .second-slide-content {
   width: 100%;
   height: 100%;
-  background: var(--dark-blue) url("/img/jpg/sliders/main-slider/second-slide-background.jpg") no-repeat;
+  background: var(--dark-blue) url("/img/jpg/sliders/promo-slider/second-slide-background.jpg") no-repeat;
 }
 
-.main-slider-item h3 {
+.promo-slider-item h3 {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
@@ -911,18 +923,12 @@ input[type="number"]:focus::-moz-placeholder {
   left: 24px;
 }
 
-.main-slider-item p {
+.promo-slider-item p {
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
   position: absolute;
   top: 64px;
-  left: 24px;
-}
-
-.features-item:last-child a {
-  position: absolute;
-  bottom: 27px;
   left: 24px;
 }
 
@@ -1179,17 +1185,14 @@ input[type="number"]:focus::-moz-placeholder {
 
 /*SERVICE*/
 
-.service {
-  max-height: 522px;
+.service-wrapper {
   background-color: var(--smoky-white);
-  padding: 64px 0 54px 0;
-  margin-bottom: 70px;
 }
 
-.service > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.service {
+  max-height: 522px;
+  padding: 64px 0 54px 0;
+  margin-bottom: 70px;
 }
 
 .service h3 {
@@ -1200,16 +1203,12 @@ input[type="number"]:focus::-moz-placeholder {
   padding-top: 25px;
 }
 
-.service-top {
-  height: 124px;
-}
-
-.service-bottom {
+.service-tabs {
   height: 334px;
   position: relative;
 }
 
-.service-bottom::after {
+.service-tabs::after {
   content: "";
   width: 10px;
   height: 279px;
@@ -1219,7 +1218,7 @@ input[type="number"]:focus::-moz-placeholder {
   top: 0;
 }
 
-.service-bottom label {
+.service-tabs label {
   width: 240px;
   height: 61px;
   font-size: 21px;
@@ -1234,32 +1233,32 @@ input[type="number"]:focus::-moz-placeholder {
   cursor: pointer;
 }
 
-.service-bottom label:hover {
+.service-tabs label:hover {
   background-color: var(--ocean-blue);
 }
 
-.service-bottom label:not(:first-of-type) {
+.service-tabs label:not(:first-of-type) {
   box-shadow: inset 0px 1px 0px var(--marengo);
 }
 
-.service-bottom-delivery {
+.service-tabs-delivery {
   left: 0;
   top: 51px;
 }
 
-.service-bottom-warranty {
+.service-tabs-warranty {
   left: 0;
   top: 111px;
 }
 
-.service-bottom-credit {
+.service-tabs-credit {
   left: 0;
   top: 171px;
 }
 
-#delivery-id:checked ~ .service-bottom-delivery,
-#warranty-id:checked ~ .service-bottom-warranty,
-#credit-id:checked ~ .service-bottom-credit {
+#delivery-id:checked ~ .service-tabs-delivery,
+#warranty-id:checked ~ .service-tabs-warranty,
+#credit-id:checked ~ .service-tabs-credit {
   color: var(--dark-blue);
   background-color: var(--white);
 }
@@ -1896,7 +1895,7 @@ h1.catalog {
   border: 2px solid var(--black);
 }
 
-/* Скрываем стрелочки у input-ов */
+/*Скрываем стрелочки у input-ов*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
