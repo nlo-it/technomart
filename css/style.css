@@ -2126,6 +2126,7 @@ footer p {
   position: absolute;
   background: url("/img/svg/forms/radio-off.svg") no-repeat;
   margin-left: -35px;
+  top: -3px;
 }
 
 .filter-input-radio:checked + .filter-label-radio::before {
@@ -2135,6 +2136,7 @@ footer p {
   position: absolute;
   background: url("/img/svg/forms/radio-on.svg") no-repeat;
   margin-left: -35px;
+  top: -3px;
 }
 
 .filter-input-radio:hover + .filter-label-radio::before,
